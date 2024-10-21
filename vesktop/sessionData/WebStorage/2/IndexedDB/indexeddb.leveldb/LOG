@@ -1,0 +1,7 @@
+2024/10/19-20:58:12.715 19a33 Reusing MANIFEST /home/antonio/.config/vesktop/sessionData/WebStorage/2/IndexedDB/indexeddb.leveldb/MANIFEST-000001
+2024/10/19-20:58:12.716 19a33 Recovering log #3
+2024/10/19-20:58:12.717 19a33 Reusing old log /home/antonio/.config/vesktop/sessionData/WebStorage/2/IndexedDB/indexeddb.leveldb/000003.log 
+2024/10/19-20:58:38.755 19927 Level-0 table #5: started
+2024/10/19-20:58:38.762 19927 Level-0 table #5: 75975 bytes OK
+2024/10/19-20:58:38.771 19927 Delete type=0 #3
+2024/10/19-20:58:38.772 19927 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

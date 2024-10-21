@@ -1,0 +1,70 @@
+2024-10-20 17:13:19.524 [info] [main] Log level: Info
+2024-10-20 17:13:19.524 [info] [main] Validating found git in: "git"
+2024-10-20 17:13:19.524 [info] [main] Using git "2.47.0" from "git"
+2024-10-20 17:13:19.524 [info] [Model][doInitialScan] Initial repository scan started
+2024-10-20 17:13:19.524 [info] > git rev-parse --show-toplevel [10ms]
+2024-10-20 17:13:19.524 [info] > git rev-parse --git-dir --git-common-dir [4ms]
+2024-10-20 17:13:19.524 [info] [Model][openRepository] Opened repository: /home/antonio/.config/nvim
+2024-10-20 17:13:19.527 [info] > git rev-parse --show-toplevel [350ms]
+2024-10-20 17:13:19.528 [info] > git config --get commit.template [356ms]
+2024-10-20 17:13:19.594 [info] > git rev-parse --show-toplevel [30ms]
+2024-10-20 17:13:19.625 [info] > git rev-parse --show-toplevel [6ms]
+2024-10-20 17:13:19.626 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/v3.0 refs/remotes/v3.0 [40ms]
+2024-10-20 17:13:19.648 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/antonio/.config/nvim/.git/refs/remotes/origin/v3.0'
+2024-10-20 17:13:19.653 [info] > git rev-parse --show-toplevel [15ms]
+2024-10-20 17:13:19.667 [info] > git rev-parse refs/remotes/origin/v3.0 [19ms]
+2024-10-20 17:13:19.705 [info] > git rev-parse --show-toplevel [39ms]
+2024-10-20 17:13:19.719 [info] > git status -z -uall [33ms]
+2024-10-20 17:13:19.721 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [19ms]
+2024-10-20 17:13:19.765 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/v3.0 refs/remotes/v3.0 [19ms]
+2024-10-20 17:13:19.780 [info] > git rev-parse --show-toplevel [65ms]
+2024-10-20 17:13:19.781 [info] [Model][doInitialScan] Initial repository scan completed - repositories (1), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2024-10-20 17:13:19.783 [info] > git config --local branch.v3.0.vscode-merge-base [3ms]
+2024-10-20 17:13:19.795 [info] > git config --get commit.template [32ms]
+2024-10-20 17:13:19.799 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/origin/v3.0 refs/remotes/origin/v3.0 [5ms]
+2024-10-20 17:13:19.882 [info] > git merge-base refs/heads/v3.0 refs/remotes/origin/v3.0 [73ms]
+2024-10-20 17:13:19.984 [info] > git diff --name-status -z --diff-filter=ADMR 3839b74f58602bec36db8150333c8b09966e42ed...refs/remotes/origin/v3.0 [88ms]
+2024-10-20 17:13:19.985 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/v3.0 refs/remotes/v3.0 [108ms]
+2024-10-20 17:13:20.020 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/antonio/.config/nvim/.git/refs/remotes/origin/v3.0'
+2024-10-20 17:13:20.035 [info] > git check-ignore -v -z --stdin [3ms]
+2024-10-20 17:13:20.038 [info] > git rev-parse refs/remotes/origin/v3.0 [18ms]
+2024-10-20 17:13:20.064 [info] > git status -z -uall [15ms]
+2024-10-20 17:13:20.070 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [6ms]
+2024-10-20 17:13:20.207 [info] > git show --textconv :lua/plugins/init.lua [14ms]
+2024-10-20 17:13:20.208 [info] > git ls-files --stage -- /home/antonio/.config/nvim/lua/plugins/init.lua [3ms]
+2024-10-20 17:13:48.028 [info] > git config --get commit.template [15ms]
+2024-10-20 17:13:48.029 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/v3.0 refs/remotes/v3.0 [3ms]
+2024-10-20 17:13:48.042 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/antonio/.config/nvim/.git/refs/remotes/origin/v3.0'
+2024-10-20 17:13:48.044 [info] > git rev-parse refs/remotes/origin/v3.0 [2ms]
+2024-10-20 17:13:48.073 [info] > git status -z -uall [18ms]
+2024-10-20 17:13:48.075 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [3ms]
+2024-10-20 17:13:58.414 [info] > git config --get commit.template [1ms]
+2024-10-20 17:13:58.420 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/v3.0 refs/remotes/v3.0 [1ms]
+2024-10-20 17:13:58.425 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/antonio/.config/nvim/.git/refs/remotes/origin/v3.0'
+2024-10-20 17:13:58.426 [info] > git rev-parse refs/remotes/origin/v3.0 [1ms]
+2024-10-20 17:13:58.441 [info] > git status -z -uall [9ms]
+2024-10-20 17:13:58.442 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [3ms]
+2024-10-20 17:14:48.980 [info] > git config --get commit.template [8ms]
+2024-10-20 17:14:48.982 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/v3.0 refs/remotes/v3.0 [3ms]
+2024-10-20 17:14:48.989 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/antonio/.config/nvim/.git/refs/remotes/origin/v3.0'
+2024-10-20 17:14:48.990 [info] > git rev-parse refs/remotes/origin/v3.0 [1ms]
+2024-10-20 17:14:49.007 [info] > git status -z -uall [9ms]
+2024-10-20 17:14:49.010 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [3ms]
+2024-10-20 17:14:54.025 [info] > git config --get commit.template [2ms]
+2024-10-20 17:14:54.034 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/v3.0 refs/remotes/v3.0 [2ms]
+2024-10-20 17:14:54.041 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/antonio/.config/nvim/.git/refs/remotes/origin/v3.0'
+2024-10-20 17:14:54.043 [info] > git rev-parse refs/remotes/origin/v3.0 [2ms]
+2024-10-20 17:14:54.054 [info] > git status -z -uall [6ms]
+2024-10-20 17:14:54.055 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [2ms]
+2024-10-20 17:15:23.269 [info] > git config --get commit.template [8ms]
+2024-10-20 17:15:23.270 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/v3.0 refs/remotes/v3.0 [2ms]
+2024-10-20 17:15:23.280 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/antonio/.config/nvim/.git/refs/remotes/origin/v3.0'
+2024-10-20 17:15:23.281 [info] > git rev-parse refs/remotes/origin/v3.0 [1ms]
+2024-10-20 17:15:23.296 [info] > git status -z -uall [10ms]
+2024-10-20 17:15:23.298 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [4ms]
+2024-10-20 17:18:10.589 [info] > git config --get commit.template [10ms]
+2024-10-20 17:18:10.591 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/v3.0 refs/remotes/v3.0 [3ms]
+2024-10-20 17:18:10.600 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/antonio/.config/nvim/.git/refs/remotes/origin/v3.0'
+2024-10-20 17:18:10.601 [info] > git rev-parse refs/remotes/origin/v3.0 [1ms]
+2024-10-20 17:18:10.619 [info] > git status -z -uall [10ms]
+2024-10-20 17:18:10.621 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [2ms]

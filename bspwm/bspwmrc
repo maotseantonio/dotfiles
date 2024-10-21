@@ -1,0 +1,84 @@
+#!/usr/bin/env bash
+#
+#  ██████╗ ███████╗██████╗ ██╗    ██╗███╗   ███╗██████╗  ██████╗
+#  ██╔══██╗██╔════╝██╔══██╗██║    ██║████╗ ████║██╔══██╗██╔════╝
+#  ██████╔╝███████╗██████╔╝██║ █╗ ██║██╔████╔██║██████╔╝██║
+#  ██╔══██╗╚════██║██╔═══╝ ██║███╗██║██║╚██╔╝██║██╔══██╗██║
+#  ██████╔╝███████║██║     ╚███╔███╔╝██║ ╚═╝ ██║██║  ██║╚██████╗
+#  ╚═════╝ ╚══════╝╚═╝      ╚══╝╚══╝ ╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝
+#	Author	-	gh0stzk
+#	Repo	-	https://github.com/gh0stzk/dotfiles
+#	Copyright (C) 2021-2024 gh0stzk <z0mbi3.zk@protonmail.com>
+
+# Current rice
+read -r RICETHEME < "${HOME}"/.config/bspwm/.rice
+
+# Set environment variables
+export PATH="$HOME/.config/bspwm/src:$PATH"
+export XDG_CURRENT_DESKTOP='bspwm'
+## Fix java applications
+export _JAVA_AWT_WM_NONREPARENTING=1
+
+#  ╦ ╦╔═╗╦═╗╦╔═╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗
+#  ║║║║ ║╠╦╝╠╩╗╚═╗╠═╝╠═╣║  ║╣ ╚═╗
+#  ╚╩╝╚═╝╩╚═╩ ╩╚═╝╩  ╩ ╩╚═╝╚═╝╚═╝
+
+# Default 1 monitor with 6 workspaces
+for monitor in $(xrandr -q | grep -w 'connected' | cut -d' ' -f1); do
+    bspc monitor "$monitor" -d '1' '2' '3' '4' '5' '6'
+    #bspc monitor "$monitor" -d '' '' '' '' '' ''
+done
+
+## For two or three monitors configuration see https://github.com/gh0stzk/dotfiles/wiki/Two-or-more-monitors-setup
+
+#  ╔╗ ╔═╗╔═╗╦ ╦╔╦╗  ╔═╗╔═╗╔╗╔╔═╗╦╔═╗
+#  ╠╩╗╚═╗╠═╝║║║║║║  ║  ║ ║║║║╠╣ ║║ ╦
+#  ╚═╝╚═╝╩  ╚╩╝╩ ╩  ╚═╝╚═╝╝╚╝╚  ╩╚═╝
+
+bspc config external_rules_command "${HOME}"/.config/bspwm/src/ExternalRules
+
+bspc config window_gap                5
+bspc config split_ratio               0.51
+bspc config single_monocle            true
+bspc config borderless_monocle        false
+bspc config gapless_monocle           false
+
+bspc config focus_follows_pointer     true
+bspc config pointer_follows_focus     false
+bspc config pointer_motion_interval   5
+bspc config pointer_modifier          mod4
+bspc config pointer_action1           move
+bspc config pointer_action2           resize_side
+bspc config pointer_action3           resize_corner
+
+bspc rule -a scratch sticky=on state=floating focus=on
+
+#  ╔═╗╦ ╦╔╦╗╔═╗╔═╗╔╦╗╔═╗╦═╗╔╦╗
+#  ╠═╣║ ║ ║ ║ ║╚═╗ ║ ╠═╣╠╦╝ ║
+#  ╩ ╩╚═╝ ╩ ╚═╝╚═╝ ╩ ╩ ╩╩╚═ ╩
+
+# Set system vars for polybar
+"$HOME"/.config/bspwm/src/SetSysVars
+
+# Load current theme
+"${HOME}"/.config/bspwm/rices/"${RICETHEME}"/Theme.sh
+
+# Launch sxhkd daemon
+pidof -q sxhkd || { sxhkd -c "${HOME}"/.config/bspwm/src/config/sxhkdrc & }
+
+# Launch picom
+pidof -q picom || { picom --config "${HOME}"/.config/bspwm/src/config/picom.conf & }
+
+# Launch xsettingsd
+pidof -q xsettings || { xsettingsd --config="${HOME}"/.config/bspwm/src/config/xsettingsd >/dev/null 2>&1 & }
+
+# Launch eww daemon
+pidof -q eww || { eww -c "${HOME}"/.config/bspwm/eww daemon & }
+
+# Launch clipboard daemon
+pidof -q greenclip || { greenclip daemon & }
+
+# Launch polkit
+pidof -q polkit-gnome-authentication-agent-1 || { /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & }
+
+# End one time code

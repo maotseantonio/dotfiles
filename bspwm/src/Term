@@ -1,0 +1,96 @@
+#!/usr/bin/env bash
+#  ████████╗███████╗██████╗ ███╗   ███╗██╗███╗   ██╗ █████╗ ██╗
+#  ╚══██╔══╝██╔════╝██╔══██╗████╗ ████║██║████╗  ██║██╔══██╗██║
+#     ██║   █████╗  ██████╔╝██╔████╔██║██║██╔██╗ ██║███████║██║
+#     ██║   ██╔══╝  ██╔══██╗██║╚██╔╝██║██║██║╚██╗██║██╔══██║██║
+#     ██║   ███████╗██║  ██║██║ ╚═╝ ██║██║██║ ╚████║██║  ██║███████╗
+#     ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝
+#   Script to open with selected terminal
+#   Author: z0mbi3
+#   url: https://github.com/gh0stzk/dotfiles
+
+CFG_TERM="$HOME/.config/bspwm/src/.term"
+DEFAULT_TERM="alacritty"
+ROFI_THEME="$HOME/.config/bspwm/src/rofi-themes/TermSelector.rasi"
+
+# Creating config file if not exists.
+[ ! -f "$CFG_TERM" ] && echo "$DEFAULT_TERM" > "$CFG_TERM"
+
+# Main var
+MY_TERM=$(< "$CFG_TERM")
+
+# Function to choose the terminal using rofi
+choose_terminal() {
+    local options=("Alacritty" "Kitty")
+    local current_term=$(tr '[:upper:]' '[:lower:]' < "$CFG_TERM")
+
+    local selected_index=$(printf '%s\n' "${options[@],,}" | awk -v cur="$current_term" '$0==cur {print NR-1; exit}')
+
+    local chosen
+    chosen=$(printf '%s\n' "${options[@]}" | rofi -theme "$ROFI_THEME" -mesg "[ Your current terminal is $MY_TERM ]" -dmenu -selected-row "$selected_index")
+
+    [[ -n "$chosen" ]] && echo "${chosen,,}" > "$CFG_TERM"
+}
+
+# Terminal selector
+[ "$1" = "--selecterm" ] && choose_terminal
+
+# Launch the terminal with appropriate options
+case $MY_TERM in
+    "alacritty")
+        case $1 in
+            "--terminal")
+                alacritty
+                ;;
+            "--floating")
+                alacritty --class FloaTerm,FloaTerm
+                ;;
+            "--update")
+                alacritty --hold --class FloaTerm,FloaTerm -e Updates --update-system
+                ;;
+            "--checkupdates")
+                alacritty --hold --class Updating,Updating -e Updates --print-updates
+                ;;
+            "--ranger")
+                alacritty --class RangerTerm,RangerTerm -e ranger
+                ;;
+            "--nvim")
+                alacritty -e nvim
+                ;;
+            "--music")
+                alacritty --class MusicTerm,MusicTerm -e ncmpcpp
+                ;;
+            "--fetch")
+                alacritty --class FetchTerm,FetchTerm -e ~/.local/bin/sysfetch
+                ;;
+        esac
+        ;;
+    "kitty")
+        case $1 in
+            "--terminal")
+                kitty
+                ;;
+            "--floating")
+                kitty --class=FloaTerm
+                ;;
+            "--update")
+                kitty --hold --class=FloaTerm -e Updates --update-system
+                ;;
+            "--checkupdates")
+                kitty --hold --class=Updating -e Updates --print-updates
+                ;;
+            "--ranger")
+                kitty --hold --class=RangerTerm -e ranger
+                ;;
+            "--nvim")
+                kitty -e nvim
+                ;;
+            "--music")
+                kitty --class=MusicTerm -e ncmpcpp
+                ;;
+            "--fetch")
+                kitty --class=FetchTerm -e ~/.local/bin/sysfetch
+                ;;
+        esac
+        ;;
+esac

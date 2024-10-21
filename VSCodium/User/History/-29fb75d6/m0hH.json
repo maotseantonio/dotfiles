@@ -1,0 +1,16 @@
+{
+    "editor.fontFamily": "'JetBrainsMono Nerd Font', 'JetBrainsMono Nerd Font', JetBrainsMono Nerd Font Mono",
+    "editor.fontSize": 20,
+    "editor.inlayHints.fontSize": 18,
+    "editor.fontLigatures": true,
+    "editor.codeLensFontSize": 18,
+    "editor.inlayHints.fontFamily": "JetBrainsMono Nerd Font",
+    "editor.fontWeight": "bold",
+    "editor.minimap.sectionHeaderFontSize": 16,
+    "editor.suggestFontSize": 18,
+    "debug.console.fontSize": 16,
+    "scm.inputFontSize": 16,
+    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.lineHeight": 1.2,
+    "workbench.colorTheme": "Catppuccin Mocha"
+}

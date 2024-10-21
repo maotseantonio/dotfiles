@@ -1,0 +1,8 @@
+2024-10-20 07:54:06.410 [info] Started local extension host with pid 28719.
+2024-10-20 07:54:10.117 [info] [perf] Render performance baseline is 93ms
+2024-10-20 07:57:14.866 [error] Illegal value for lineNumber: Error: Illegal value for lineNumber
+    at Vm.getLineMaxColumn (vscode-file://vscode-app/usr/share/vscodium/resources/app/out/vs/workbench/workbench.desktop.main.js:254:144)
+    at $a.getBottomForLineNumber (vscode-file://vscode-app/usr/share/vscodium/resources/app/out/vs/workbench/workbench.desktop.main.js:263:2182)
+    at NI.findScrollWidgetState (vscode-file://vscode-app/usr/share/vscodium/resources/app/out/vs/workbench/workbench.desktop.main.js:477:70440)
+    at NI._updateState (vscode-file://vscode-app/usr/share/vscodium/resources/app/out/vs/workbench/workbench.desktop.main.js:477:69461)
+    at async NI._renderStickyScroll (vscode-file://vscode-app/usr/share/vscodium/resources/app/out/vs/workbench/workbench.desktop.main.js:477:68433)

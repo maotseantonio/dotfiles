@@ -1,0 +1,5 @@
+2024-10-19 19:59:37.385 [info] update#setState disabled
+2024-10-19 19:59:37.386 [info] update#ctor - updates are disabled as there is no update URL
+2024-10-19 21:00:20.627 [info] Extension host with pid 608727 exited with code: 0, signal: unknown.
+2024-10-19 21:00:20.665 [error] Blocked vscode-file request vscode-file://vscode-app/usr/share/vscodium/resources/app/out/vs/editor/common/services/editorSimpleWorker.esm.js#TextEditorWorker
+2024-10-19 21:00:20.678 [error] [UtilityProcessWorker]: terminated unexpectedly with code 18446744072034136000, signal: unknown

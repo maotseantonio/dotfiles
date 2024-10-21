@@ -1,0 +1,56 @@
+window {
+    background: rgba(30, 30, 46, 0.8);
+    /*	background: #B1AAB8;*/
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 3.5px;
+    /*	border-width:0px;*/
+    /*	border-color: #947A86;*/
+    border-color: rgba(245, 194, 231, 1);
+    /*	border-bottom: none;*/
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    /*	border-color: #B1ABB9;*/
+}
+
+#box {
+    /* Define attributes of the box surrounding icons here */
+    padding: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+
+#active {
+    /* This is to underline the button representing the currently active window */
+    /*	border: solid 2px;*/
+    border-radius: 8px;
+    /*	border-color: rgba(203, 166, 247, 0.9);*/
+    /*	background: rgba(221, 120, 120,0.4);*/
+    background: rgba(102, 99, 116, 0.3);
+}
+
+button, image {
+    background: none;
+    border-style: none;
+    box-shadow: none;
+    color: #f38ba8;
+}
+
+button {
+    padding: 4px;
+    margin-left: 4px;
+    margin-right: 4px;
+    color: #f38ba8;
+    font-size: 12px;
+}
+
+button:hover {
+    border-radius: 8px;
+    background-color: rgba(204, 208, 218,1);
+}
+
+button:focus {
+    box-shadow: none
+}

@@ -1,0 +1,20 @@
+/**
+ * @name Midnight-Catppuccin
+ * @description A Catppuccin Palette, rounded discord theme. 
+ * @author bxrlin
+ * @version 1.0.1
+ * @source https://github.com/bxrlin/Midnight-Catppuccin
+ * @authorId 852568620012797972
+*/
+
+@import url('https://bxrlin.github.io/Midnight-Catppuccin/midnight-catppuccin.css');
+
+
+/* User-Icons */
+@import url("https://capnkitten.github.io/BetterDiscord/Themes/user-icons.css");
+/* Font */
+@import url("https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/css/fonts/google-sans.css");
+/* UI-Icons */
+@import url("https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/css/icons.css");
+/* Folder-Redesign */
+@import url("https://warrayquipsome.github.io/Chillax/Addons/FolderRedesign.css");
