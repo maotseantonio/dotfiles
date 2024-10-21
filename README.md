@@ -1,0 +1,8 @@
+my personal config on the top of jakoolit and archcraft![Screenshot_21-Oct_21-28-21_6101](https://github.com/user-attachments/assets/4664e021-3c46-4d21-bf8d-b5afe5cf2c43)
+![Screenshot_21-Oct_21-27-52_20297](https://github.com/user-attachments/assets/b3fad882-38c8-4a03-a04c-989bf604ce43)
+![Screenshot_21-Oct_21-27-24_1948](https://github.com/user-attachments/assets/7e4e3f99-6033-43eb-b74b-5a12a636f1d3)
+![Screenshot_21-Oct_21-21-40_10649](https://github.com/user-attachments/assets/211cb86a-1b40-4ebf-b744-5cc693486e3a)
+![Screenshot_21-Oct_21-20-41_11922](https://github.com/user-attachments/assets/d2d94d47-6707-4985-b4e7-baafc94e140a)
+![Screenshot_21-Oct_21-19-38_11291](https://github.com/user-attachments/assets/57499f96-ddda-46e6-8787-17a57e2ff2d1)
+![Screenshot_21-Oct_21-19-10_12260](https://github.com/user-attachments/assets/b7014122-0045-4ecb-9477-b1e4f982ce5b)
+![Screenshot_21-Oct_21-18-44_9837](https://github.com/user-attachments/assets/012c688a-26c1-422c-8941-64567e88d25d)
